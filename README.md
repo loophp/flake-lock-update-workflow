@@ -25,7 +25,7 @@ on:
 
 jobs:
   createPullRequest:
-    uses: loophp/flake-lock-update-workflow/.github/workflows/upgrade-flakes.yaml@v1.0
+    uses: loophp/flake-lock-update-workflow/.github/workflows/upgrade-flakes.yaml@1.0.0
 ```
 
 And it's done!
