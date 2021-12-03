@@ -1,6 +1,5 @@
 [![GitHub stars][github stars]][1]
  [![Donate!][donate github]][5]
- [![Donate!][donate paypal]][6]
 
 # Flake Lock Update Workflow
 
@@ -34,8 +33,7 @@ And it's done!
 
 Feel free to contribute by sending Github pull requests. I'm quite responsive :-)
 
-If you can't contribute to the code, you can also sponsor me on [Github][5] or
-[Paypal][6].
+If you can't contribute to the code, you can also sponsor me on [Github][5].
 
 ## Changelog
 
@@ -58,13 +56,7 @@ For more detailed changelogs, please check [the release changelogs][45].
 [donate paypal]: https://img.shields.io/badge/Sponsor-Paypal-brightgreen.svg?style=flat-square
 [34]: https://github.com/loophp/flake-lock-update-workflow/issues
 [2]: https://github.com/loophp/flake-lock-update-workflow/actions
-[35]: http://www.phpspec.net/
-[36]: https://github.com/phpro/grumphp
-[37]: https://github.com/infection/infection
-[38]: https://github.com/phpstan/phpstan
-[39]: https://github.com/vimeo/psalm
-[5]: https://github.com/sponsors/loophp
-[6]: https://www.paypal.me/loophp
+[5]: https://github.com/sponsors/drupol
 [43]: https://github.com/loophp/flake-lock-update-workflow/blob/master/CHANGELOG.md
 [44]: https://github.com/loophp/flake-lock-update-workflow/commits/master
 [45]: https://github.com/loophp/flake-lock-update-workflow/releases
