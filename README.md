@@ -15,7 +15,7 @@ Read more information about this feature [on Github][50].
 
 You can choose to use the latest release or the latest commit from the `main` branch.
 
-I would personally suggest to use the latest commit from `main` branch as such:
+I would personally suggest to use the latest release: `1.0.0`
 
 Create an action file in `.github/workflows/` with:
 
@@ -28,10 +28,10 @@ on:
 
 jobs:
   createPullRequest:
-    uses: loophp/flake-lock-update-workflow/.github/workflows/upgrade-flakes.yaml@main
+    uses: loophp/flake-lock-update-workflow/.github/workflows/upgrade-flakes.yaml@1.0.0
 ```
 
-If you want to switch to a particular release, replace `main` with the release tag that you want as such:
+If you want to switch to the branch, replace `1.0.0` with `main` as such:
 
 ```yaml
 name: 'Update flake lock file'
@@ -42,7 +42,7 @@ on:
 
 jobs:
   createPullRequest:
-    uses: loophp/flake-lock-update-workflow/.github/workflows/upgrade-flakes.yaml@1.0.1
+    uses: loophp/flake-lock-update-workflow/.github/workflows/upgrade-flakes.yaml@main
 ```
 
 And it's done!
