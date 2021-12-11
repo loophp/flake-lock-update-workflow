@@ -23,8 +23,10 @@ Create an action file in `.github/workflows/` with:
 name: 'Update flake lock file'
 
 on:
+  # Uncomment this to enable manuel triggering
+  # workflow_dispatch:
   schedule:
-    - cron: '0 6 * * *'
+    - cron: '0 6 * * *' # Everyday at 6am, see https://crontab.guru/ for more examples
 
 jobs:
   createPullRequest:
@@ -38,8 +40,10 @@ If you want to switch to the release, replace `main` with the
 name: 'Update flake lock file'
 
 on:
+  # Uncomment this to enable manuel triggering
+  # workflow_dispatch:
   schedule:
-    - cron: '0 6 * * *'
+    - cron: '0 6 * * *' # Everyday at 6am, see https://crontab.guru/ for more examples
 
 jobs:
   createPullRequest:
