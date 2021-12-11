@@ -2,9 +2,9 @@ name: "Test flake lock file update workflow"
 
 on:
   push:
-  pull_request:
+  workflow_dispatch:
   schedule:
-    - cron: "0 6 * * *"
+    - cron: '0 6 * * *' # Everyday at 6am, see https://crontab.guru/ for more examples
 
 jobs:
   createPullRequest:
