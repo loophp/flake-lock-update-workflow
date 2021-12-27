@@ -4,7 +4,7 @@ on:
   push:
   workflow_dispatch:
   schedule:
-    - cron: '0 6 * * *' # Everyday at 6am, see https://crontab.guru/ for more examples
+    - cron: '0 0 * * 1' # Everyday Monday at midnight, see https://crontab.guru/ for more examples
 
 jobs:
   createPullRequest:
