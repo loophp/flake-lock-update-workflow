@@ -26,7 +26,7 @@ on:
   # Uncomment this to enable manuel triggering
   # workflow_dispatch:
   schedule:
-    - cron: '0 6 * * *' # Everyday at 6am, see https://crontab.guru/ for more examples
+    - cron: '0 0 * * 1' # Every Monday at midnight, see https://crontab.guru/ for more examples
 
 jobs:
   createPullRequest:
@@ -43,7 +43,7 @@ on:
   # Uncomment this to enable manuel triggering
   # workflow_dispatch:
   schedule:
-    - cron: '0 6 * * *' # Everyday at 6am, see https://crontab.guru/ for more examples
+    - cron: '0 0 * * 1' # Every Monday at midnight, see https://crontab.guru/ for more examples
 
 jobs:
   createPullRequest:
