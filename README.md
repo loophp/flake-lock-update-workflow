@@ -5,9 +5,11 @@
 
 ## Description
 
-This repository provide a Github Workflow file ready to use to make sure that the `flake.lock`
-file in your repository stay up-to-date by creating a pull-request every time it detected
-some changes.
+This repository provides Github Workflows ready to use to make sure that the `flake.lock`
+file in your repository stay up-to-date.
+
+* Either by creating a pull-request
+* Either by silently updating the repository `flake.lock` file.
 
 Read more information about this feature [on Github][50].
 
@@ -50,7 +52,21 @@ jobs:
     uses: loophp/flake-lock-update-workflow/.github/workflows/upgrade-flakes.yaml@1.0.2
 ```
 
-And it's done!
+To have your `flake.lock` file updated silently, use:
+
+```yaml
+name: 'Update flake lock file'
+
+on:
+  # Uncomment this to enable manuel triggering
+  # workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * 1' # Every Monday at midnight, see https://crontab.guru/ for more examples
+
+jobs:
+  createPullRequest:
+    uses: loophp/flake-lock-update-workflow/.github/workflows/auto-upgrade-flakes.yaml@main
+```
 
 ## Contributing
 
