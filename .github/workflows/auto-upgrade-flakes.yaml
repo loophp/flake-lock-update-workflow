@@ -10,8 +10,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-        with:
-            fetch-depth: 1
 
       - name: Install Nix
         uses: cachix/install-nix-action@v17
@@ -19,9 +17,11 @@ jobs:
           nix_path: nixpkgs=channel:nixos-unstable
 
       - name: Update flake.lock
-        run: nix flake update
+        run: |
+          nix flake update --commit-lock-file --commit-lockfile-summary "$COMMIT_MSG"
 
-      - uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: Update `flake.lock` file.
-          file_pattern: flake.lock
+      - name: Push changes
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git push
