@@ -2,6 +2,7 @@ name: 'Auto utpdate flake lock file'
 
 on:
   workflow_call: ~
+  workflow_dispatch:
 
 jobs:
   auto-upgrade-flake-lock:
