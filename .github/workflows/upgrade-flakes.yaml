@@ -20,4 +20,4 @@ jobs:
           nix_path: nixpkgs=channel:nixos-unstable
 
       - name: Update flake.lock
-        uses: DeterminateSystems/update-flake-lock@v17
+        uses: DeterminateSystems/update-flake-lock@v18
