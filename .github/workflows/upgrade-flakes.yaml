@@ -1,7 +1,11 @@
 name: 'Update flake lock file'
 
 on:
-  workflow_call: ~
+  workflow_call:
+    secrets:
+      token:
+        description: 'A token passed from the caller workflow to trigger tests on the pull request.'
+        required: true
   workflow_dispatch:
 
 jobs:
@@ -18,4 +22,4 @@ jobs:
       - name: Update flake.lock
         uses: DeterminateSystems/update-flake-lock@v20
         with:
-          token: ${{ secrets.LOOPHP_BOT_TOKEN }}
+          token: ${{ secrets.token }}
