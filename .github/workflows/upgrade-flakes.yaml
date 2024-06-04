@@ -16,12 +16,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install Lix
-        run: |
-          curl -sSf -L https://install.lix.systems/lix | sh -s -- install --no-confirm
-          echo "trusted-users = root worker" | sudo tee -a /etc/nix/nix.conf
-          echo "experimental-features = nix-command flakes" | sudo tee -a /etc/nix/nix.conf
-          sudo systemctl restart nix-daemon
+      - name: Install Nix
+        uses: DeterminateSystems/nix-installer-action@v8
 
       - name: Update flake.lock
         uses: DeterminateSystems/update-flake-lock@v20
