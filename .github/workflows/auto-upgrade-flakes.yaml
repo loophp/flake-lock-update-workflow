@@ -19,7 +19,7 @@ jobs:
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          nix flake update --commit-lock-file --commit-lockfile-summary "$COMMIT_MSG"
+          nix flake update --commit-lock-file
 
       - name: Push changes
         run: |
